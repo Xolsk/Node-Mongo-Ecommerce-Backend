@@ -7,7 +7,7 @@ const adminSchema = new Schema({
     product: {type:String}, //Comic, Miniature, Poster, Tshirt..
     title: {type:String, required: true},
     price:{type:String, required:true},
-    number:{type:String, required:true}, ////HOLI
+    number:{type:String, required:true}, 
     published: {type:String, required: true},
     editorial: {type:String, required:true },
     distributor: {type:String, required: true},
@@ -17,8 +17,8 @@ const adminSchema = new Schema({
     pages: {type:String},
     description: {type:String},
     cover: {type: String},
-    stock: {type:String},
-    sold: {type:String, default:"0"},
+    stock: {type:Number},
+    sold: {type:Number, default:0},
     hidden: {type:Boolean,default:"false"},
     sale: {type:Boolean, default:"false"},
     salePrice:{type:String, default:"0"},

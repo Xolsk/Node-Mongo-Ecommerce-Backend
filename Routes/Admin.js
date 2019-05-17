@@ -5,6 +5,10 @@ const express = require('express'),
 
 router.get('/all', controller.findAll); //lists all products
 
+router.get(`/date`, controller.findByDate); //lists by Date the latest 25.
+
+router.get(`/sold`, controller.findBySold); //lists by Date the latest 25.
+
 router.get('/:searchInput', controller. findByMatch); //find product by matches on DB.
 
 router.post('/add', controller.add); //add product

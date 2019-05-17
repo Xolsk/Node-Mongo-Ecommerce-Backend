@@ -171,5 +171,28 @@ class AdminController {
             res.send({ e })
         }
     }
+
+    async findByDate(req, res) {
+        
+        try {
+            let foundItems = await admin.find().sort({created: -1}).limit(25);
+            
+            res.send(foundItems);
+        }
+        catch (e) {
+            res.send({ e })
+        }
+    }
+
+    async findBySold(req, res) {
+        
+        try {
+            let foundItems = await admin.find().sort({sold: -1}).limit(25);
+            res.send(foundItems);
+        }
+        catch (e) {
+            res.send({ e })
+        }
+    }
 }
 module.exports = new AdminController;

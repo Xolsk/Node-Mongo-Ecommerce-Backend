@@ -17,9 +17,11 @@ app.use(cors())
  const adminRoute = require("./Routes/Admin.js");
   const userRoute = require("./Routes/Users.js");
   const orderRoute = require("./Routes/Orders.js");
+  const imagesRoute = require("./Routes/Images.js");
     app.use("/admin", adminRoute);
      app.use("/user", userRoute);
      app.use("/orders", orderRoute);
+     app.use ("/images", imagesRoute);
     
 const port = 2000
 app.listen(port, () => console.log(`listening on port ${port}`))
