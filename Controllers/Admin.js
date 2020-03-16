@@ -71,8 +71,9 @@ class AdminController {
 
 
     async add(req, res) {
-        let { id, product, title, price, number, format, published, editorial, writer, drawer, pages,
-            description, cover, distributor, stock, sale, salePrice, hidden }
+        let { id, product, title, price, number, format, published, editorial, writer,
+             drawer, pages, description, cover, interior01, interior02, distributor,
+              stock, sale, salePrice, hidden }
             = req.body;
         try {
             const usercheck = await admin.findOne({ id })
@@ -93,6 +94,8 @@ class AdminController {
                 pages,
                 description,
                 cover,
+                interior01,
+                interior02,
                 stock,
                 hidden,
                 sale,
@@ -101,7 +104,7 @@ class AdminController {
             res.send({ added, message: "Product added correctly." })
         }
         catch (e) {
-            res.send({ message: "Ooops" })
+            res.send({ message: "Ooops, something is wrong." })
         }
     }
     async remove(req, res) {

@@ -27,6 +27,4 @@ router.post (`/findAmount`, controller.findAmount); //find total in cart
 
 // router.get('/userdata/', controller.listUsers); ///filter options??
 
-
-
 module.exports = router;

@@ -3,9 +3,7 @@ const bcrypt = require("bcrypt");
 const jsonwebtoken = require("jsonwebtoken");
 const saltRounds = 10;
 
-
 class UserController {
-
 
     async login(req, res) {
         let { email, password } = req.body;
